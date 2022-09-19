@@ -451,6 +451,9 @@ p{
         width: 80%;
     }
     
+    #click{
+        margin-top: 0;
+    }
     /* funFact */
     .funFact p{
         font-size: 1.5em;
@@ -702,6 +705,7 @@ p{
     }
     #bcrypt{
         width: 20px;
+        margin-top: 5px;
     }
 
     .projectRow {
