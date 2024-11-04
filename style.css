@@ -61,6 +61,10 @@ p {
   margin-top: 5%;
 }
 
+.smallScreenImage {
+  display: none;
+}
+
 /* mouse */
 #mouse {
   background-color: transparent;
@@ -226,12 +230,13 @@ a {
   display: flex;
   gap: 1rem;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .skillsBox {
   border: solid 1px #f2f0ec;
   padding: 2rem;
-  border-radius: 10%;
+  border-radius: 30px;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
@@ -278,10 +283,11 @@ li {
   margin-top: 5%;
 }
 
-#maskit {
+#maskit,
+#tbgProject {
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
-  width: 26%;
+  width: 20rem;
 }
 
 .about p {
@@ -295,7 +301,7 @@ li {
 }
 
 #projectManager {
-  width: 50%;
+  width: 90%;
   border-radius: 5%;
   margin-top: -5%;
 }
@@ -329,6 +335,26 @@ li {
 .smallText {
   width: 100%;
   font-size: small;
+}
+.greyBackground {
+  background: linear-gradient(
+    to bottom,
+    rgba(108, 114, 158, 0.1) 60%,
+    white 40%
+  );
+  margin-top: 5%;
+  padding-top: 1rem;
+}
+
+.dateWidth {
+  width: 20%;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
 }
 
 /* slide effect  */
@@ -415,10 +441,140 @@ li {
 
 /* screen size */
 @media only screen and (max-width: 428px) {
+  .navBar {
+    justify-content: flex-start;
+  }
+
+  .smallScreenNoWidth {
+    width: 100% !important;
+  }
+
+  .smallScreenDisplayNone {
+    display: none;
+  }
+
+  #mouse {
+    display: none;
+  }
+
+  .smallScreenImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   #carolineHeader {
+    width: 80%;
+    margin-top: 30%;
+  }
+
+  .intro {
+    top: 55%;
+    width: auto;
+    margin: 10%;
+    left: 0%;
+    position: relative;
+  }
+
+  .intro p {
     width: 100%;
-    margin-top: 200px;
-    margin-left: 150px;
+    text-align: justify;
+  }
+
+  .smallMarginBottom {
+    margin-bottom: 10%;
+  }
+
+  .smallScreenFontXS {
+    font-size: x-small !important;
+  }
+
+  .smallScreenFontL {
+    font-size: large !important;
+  }
+
+  .smallScreenFontXl {
+    font-size: x-large;
+    margin-left: 0%;
+  }
+
+  .smallScreenTextCenter {
+    text-align: center;
+  }
+
+  .smallScreenTextLeft {
+    text-align: left;
+  }
+
+  .flexBox {
+    display: block;
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .smallScreenFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallScreenVideo {
+    height: 30vh;
+    width: 100%;
+    margin: 5%;
+  }
+
+  #maskit,
+  #tbgProject {
+    width: 90%;
+  }
+
+  .projectSkills {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skillsDiv {
+    display: block;
+  }
+
+  .skillsBox {
+    margin-bottom: 10%;
+  }
+
+  .greyBackground {
+    /* background: rgba(108, 114, 158, 0.1);
+    padding-bottom: 10%; */
+    background: rgb(108, 114, 158);
+    background: linear-gradient(
+      180deg,
+      rgba(155, 162, 210, 0.7147233893557423) 35%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .marginBlockFlex {
+    display: block;
+    text-align: justify;
+  }
+
+  .marginBlockFlex p {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  #projectManager {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .dateWidth {
+    width: 100%;
+  }
+
+  .marginBlockFlex p {
+    margin-bottom: 5%;
   }
 
   #experience {
@@ -427,144 +583,104 @@ li {
     font-size: 0.5em;
   }
 
-  #TbgScreen1 {
-    width: 184px;
-    height: 150px;
+  .experienceExpl {
+    text-align: left;
   }
-  /* #TbgScreen1:hover {
-    width: 194px;
-    height: 170px;
-  } */
 
-  .iconBar,
-  .mailBar,
+  .experienceDescription p {
+    text-align: left;
+  }
+
   #colorImg,
   .navBar a {
     display: none;
   }
 
-  .coder,
-  .manager {
-    position: static;
-    width: 100%;
-  }
-
-  .technologiesNames {
-    margin: 10% 5% 0 5%;
-  }
-
-  .tech {
-    height: 120px;
-    width: 300px;
-    flex: 1;
-    padding: 10px;
-  }
-  .techLight,
-  .bold {
-    font-size: 0.8em;
-    margin-right: 10px;
-    margin-left: 25px;
-  }
-  #bcrypt {
-    width: 20px;
-    margin-top: 5px;
-  }
-
-  .projectRow {
-    display: block;
-  }
-  /* .projectSquare {
-    width: 100%;
-  } */
-  /* .projectSquare p {
-    width: 80%;
-  } */
-
-  .about p {
-    width: 70%;
-    line-height: 30px;
-  }
-
-  .contentTimeLine {
-    display: block;
-  }
-  .sideMenu {
-    display: inline;
-    margin-top: 15%;
-  }
-  .sideMenu button {
-    margin: 0;
-    padding: 10px 0;
-    text-align: left;
-    margin-left: 10%;
-  }
-  .box {
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 10% 5%;
-  }
-  #ceo {
-    margin-left: -5%;
-    margin-top: 30px;
-  }
-
-  .funFact p {
-    font-size: 1em;
-    width: 85%;
-  }
-
-  #skillGraph {
-    width: 80%;
-    margin-top: 50px;
-    margin-bottom: 0;
-  }
-  .skillNames p {
-    width: 40%;
-  }
-  #teamman,
-  #cod,
-  #prod {
-    margin-top: 0px;
-  }
-  #prob,
-  #org {
-    margin-top: 50px;
-  }
-  #org {
-    width: 55px;
-    word-wrap: break-word;
-  }
-
   .contactsIcons {
     flex-wrap: wrap;
   }
+
+  .footer {
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
 }
 
-@media only screen and (min-width: 481px) {
-  #TbgScreen1 {
-    width: 218px;
-    height: 186px;
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  #carolineHeader {
+    width: 40%;
+    margin-top: 10%;
   }
-  /* #TbgScreen1:hover {
-    width: 238px;
-    height: 206px;
-  } */
-  #carolineHeader,
-  #experience {
+
+  .smallScreenFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smallScreenImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro {
+    top: 55%;
+    width: auto;
+    margin: 10%;
+    left: 0%;
+    position: relative;
+  }
+
+  .intro p {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .smallScreenDisplayNone {
     display: none;
+  }
+
+  #mouse {
+    display: none;
+  }
+
+  .flexBox {
+    flex-wrap: wrap;
+  }
+
+  #maskit,
+  #tbgProject {
+    width: 50%;
+  }
+
+  .marginBlockFlex {
+    display: block;
+    text-align: justify;
+  }
+
+  .marginBlockFlex p {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+
+  .dateWidth {
+    width: 100%;
+  }
+
+  #experience {
+    width: 80%;
+    color: #464545;
+    font-size: 0.5em;
+  }
+
+  .experienceExpl {
+    text-align: left;
+  }
+
+  .experienceDescription p {
+    text-align: left;
   }
 }
 @media only screen and (min-width: 1023px) {
-  #TbgScreen1 {
-    width: 328px;
-    height: 280px;
-  }
-  /* #TbgScreen1:hover {
-    width: 370px;
-    height: 323px;
-  } */
-  #carolineHeader,
-  #experience {
-    display: none;
-  }
 }
